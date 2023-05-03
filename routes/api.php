@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('create', [UserController::class, 'store'])->name('create-user');
+Route::post('createAddress', [UserController::class, 'storeAddress'])->name('create-address');
+Route::post('createProject', [ProjectController::class, 'store'])->name('create-project');

@@ -4,13 +4,13 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RegisterUserAddressRequest extends FormRequest
+class RegisterAddressRequest extends UserBaseRequest
 {
     public function rules()
     {
         return [
             /**
-             * @param Model/UserAddress
+             * @param Model/Address
              */
             "city" => [
                 "required",
