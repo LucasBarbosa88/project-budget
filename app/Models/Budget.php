@@ -19,7 +19,7 @@ class Budget extends Authenticatable
      */
     protected $fillable = [
         'user_id',
-        'budget_value'
+        'budget_amount'
 
     ];
 }

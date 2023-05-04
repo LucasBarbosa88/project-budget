@@ -16,5 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::post('create', [UserController::class, 'store'])->name('create-user');
-Route::post('createAddress', [UserController::class, 'storeAddress'])->name('create-address');
 Route::post('createProject', [ProjectController::class, 'store'])->name('create-project');

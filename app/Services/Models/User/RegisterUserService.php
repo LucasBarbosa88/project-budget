@@ -15,7 +15,6 @@ class RegisterUserService extends BaseService
     }
 
     public function run() {
-        $this->data['password'] = Hash::make($this->data['password']);
         $user = new User($this->data);
         if($user->save()) {
             return $user->refresh();
